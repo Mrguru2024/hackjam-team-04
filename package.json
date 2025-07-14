@@ -1,0 +1,26 @@
+{
+  "name": "levelup-hackjam",
+  "version": "1.0.0",
+  "description": "LevelUp - Gamified career progress tracker for Per Scholas alumni",
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "start": "cd frontend && npm run start",
+    "lint": "cd frontend && npm run lint",
+    "backend": "cd backend && npm start",
+    "install-all": "npm install && cd frontend && npm install --legacy-peer-deps && cd ../backend && npm install"
+  },
+  "keywords": [
+    "gamification",
+    "career",
+    "per-scholas",
+    "nextjs",
+    "express"
+  ],
+  "author": "HackJam Team 04",
+  "license": "MIT",
+  "dependencies": {
+    "firebase-admin": "^13.4.0",
+    "mongoose": "^8.16.3"
+  }
+}

@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --surface-subtle: #EFEDED;
+    --surface-default: #575252;
+    --surface-disabled: #B7B5B5;
+    --border-default: #C6C6C6;
+    --border-disabled: #9AA7BC;
+    --border-darker: #575252;
+    --border-error: #B41C2B;
+    --border-success: #009F42;
+    --border-warning: #F0AD4E;
+    --text-title: #161515;
+    --text-body: #353232;
+    --text-subtitle: #353232;
+    --text-caption: #767070;
+    --text-negative: #EFEDED;
+    --text-disabled: #919191;
+    --primary-subtle: #C2D8FE;
+    --primary-lighter: #74A6FF;
+    --primary-default: #2977FF;
+    --primary-darker: #2A4EA2;
+  }
+
+  .dark {
+    --surface-subtle: #575252;
+    --surface-default: #EFEDED;
+    --text-title: #EFEDED;
+    --text-body: #EFEDED;
+    --text-subtitle: #EFEDED;
+    --text-caption: #B7B5B5;
+    --text-negative: #161515;
+  }
+}
+
+@layer components {
+  .font-jura {
+    font-family: 'Jura', sans-serif;
+  }
+} 
