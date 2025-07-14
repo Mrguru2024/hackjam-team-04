@@ -1,46 +1,100 @@
-# LevelUp Frontend
+# LevelUp: Gamified Career Progress Tracker
 
-This is the frontend application for LevelUp - a gamified career progress tracker for Per Scholas alumni.
+LevelUp is a full-stack web application designed to help Per Scholas alumni gamify their career journey. Users can log tasks, earn XP, unlock badges, and compete on a leaderboard—all while tracking their professional growth in a fun, engaging way.
 
-## Tech Stack
+## What This Project Includes
 
-- **Framework:** Next.js 15.3.5 (App Router)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **Authentication:** Firebase
-- **State Management:** React Context + Zustand
-- **HTTP Client:** Axios
+- **Frontend:** Next.js 15 (App Router), TypeScript, Tailwind CSS, Zustand, React Context, Firebase Auth, Responsive & Dark Mode UI
+- **Backend:** Node.js, Express.js, MongoDB (via Mongoose), Firebase Admin SDK for secure authentication, RESTful API
+- **Features:**
+  - Secure authentication (Firebase)
+  - 3-step onboarding flow
+  - XP and badge system
+  - Task logging and tracking
+  - Leaderboard for friendly competition
+  - Personalized dashboard and progress analytics
+  - Modern, mobile-friendly UI
+  - Environment variable support for easy deployment
+
+## Collaboration
+
+This project is built for team collaboration. Multiple contributors can work on both frontend and backend, with clear separation of concerns and modular code structure.
+
+---
 
 ## Getting Started
 
-1. Install dependencies:
+### Prerequisites
 
-   ```bash
-   npm install --legacy-peer-deps
-   ```
+- Node.js (v18+ recommended)
+- npm (v9+ recommended)
+- MongoDB (local or cloud instance)
 
-2. Set up environment variables:
-   Create a `.env.local` file with your Firebase configuration:
+### 1. Clone the repository
 
-   ```
-   NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
-   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
-   NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
-   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_storage_bucket
-   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
-   NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
-   NEXT_PUBLIC_API_URL=http://localhost:5000/api
-   ```
+```bash
+git clone https://github.com/Mrguru2024/hackjam-team-04.git
+cd hackjam-team-04
+```
 
-3. Run the development server:
+### 2. Setup the Backend
 
-   ```bash
-   npm run dev
-   ```
+```bash
+cd backend
+npm install
+```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+- Create a `.env` file in the backend directory with your MongoDB URI and any other required secrets.
+- Add your Firebase Admin SDK JSON file to `docs/` and reference it in `firebaseAdmin.js`.
+- Start the backend server:
 
-## Project Structure
+```bash
+npm run dev
+```
+
+### 3. Setup the Frontend
+
+```bash
+cd ../frontend
+npm install --legacy-peer-deps
+```
+
+- Create a `.env.local` file in the frontend directory with your Firebase and API config (see `.env.example`).
+- Start the frontend server:
+
+```bash
+npm run dev
+```
+
+- Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## Backend Overview
+
+- **Express.js** REST API for user, task, and badge management
+- **MongoDB** for persistent storage
+- **Firebase Admin SDK** for secure authentication and user management
+- **API Endpoints:**
+  - `/api/tasks/user` - Get user info
+  - `/api/tasks/tasks` - Get user tasks
+  - `/api/tasks/user/tags` - Update user tags
+  - `/api/tasks/log` - Log a new task
+
+---
+
+## Contributor Guidelines
+
+- Use feature branches for new work (e.g., `feature/your-feature-name`)
+- Write clear, descriptive commit messages
+- Keep code modular and follow the existing folder structure
+- Use Prettier and ESLint for code formatting and linting
+- Add or update documentation as needed
+- Open a pull request for review before merging to main or shared branches
+
+---
+
+## Project Structure (Frontend)
 
 ```
 frontend/
@@ -59,7 +113,7 @@ frontend/
 └── public/               # Static assets
 ```
 
-## Available Scripts
+## Available Scripts (Frontend)
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
